@@ -1,0 +1,115 @@
+/* src/QRCodeGenerator.css */
+
+.qr-code-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(75, 0, 130, 0.7) 50%, rgba(0, 0, 0, 0.7) 100%),
+              url('https://www.toptal.com/designers/subtlepatterns/patterns/memphis-mini.png');
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.qr-input {
+  width: 80%;
+  max-width: 400px;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+  border-radius: 30px;
+  font-size: 18px;
+  outline: none;
+  transition: border 0.3s ease;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.qr-input:focus {
+  border-color: #ff6f61;
+}
+
+.qr-code {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.qr-code:hover {
+  transform: scale(1.05);
+}
+
+.download-btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  background-color: #ff6f61;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.download-btn:hover {
+  background-color: #ff3e2d;
+  transform: scale(1.05);
+}
+/* src/QRCodeGenerator.css */
+
+/* Existing styles remain the same... */
+
+.download-btn {
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #ff6f61, #ff9068);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.download-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+  border-radius: inherit;
+}
+
+.download-btn:hover::before {
+  opacity: 1;
+}
+
+.download-btn:hover {
+  transform: translateY(-3px);
+}
+
+.download-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
